@@ -1,4 +1,4 @@
-import { changelogEntries, featureCards, heroStats, rosterCards, spotlightScripts, supportLinks, suiteSignals } from './danzaio-data.js';
+import { allChampionCards, changelogEntries, featureCards, heroStats, rosterCards, spotlightScripts, supportLinks, suiteSignals } from './danzaio-data.js';
 
 const app = document.querySelector('#app');
 
@@ -52,6 +52,17 @@ const renderRosterCard = (card, index) => `
   </article>
 `;
 
+const renderCatalogCard = (card, index) => `
+  <article class="danzaio-catalog-card" style="--reveal-delay:${index * 40}ms;">
+    <div class="danzaio-catalog-card__topline">
+      <span class="danzaio-catalog-card__tag">${card.tag}</span>
+      <span class="danzaio-catalog-card__badge">${iconBadge()}</span>
+    </div>
+    <h3>${card.name}</h3>
+    <p>${card.desc}</p>
+  </article>
+`;
+
 const renderFactCard = (entry, index) => `
   <article class="danzaio-update-card" style="--reveal-delay:${index * 100}ms;">
     <div class="danzaio-update-card__meta">
@@ -75,14 +86,14 @@ app.innerHTML = `
       </a>
       <nav class="riotbar__nav" aria-label="Rift+ showcase">
         <a href="#overview">OVERVIEW</a>
-        <a href="#systems">FEATURES</a>
         <a href="#spotlight">SPOTLIGHT</a>
-        <a href="#roster">ROSTER</a>
+        <a href="#roster">HIGHLIGHTS</a>
+        <a href="#all-champions">ALL CHAMPIONS</a>
         <a href="#updates">FACTS</a>
       </nav>
       <div class="riotbar__actions">
         <a class="pill pill--dark" href="https://t.me/DanzAIO" target="_blank" rel="noreferrer">TELEGRAM</a>
-        <a class="pill pill--cyan" href="https://danzaio.github.io/champions/" target="_blank" rel="noreferrer">LIVE CATALOG</a>
+        <a class="pill pill--cyan" href="#all-champions">ALL CHAMPIONS</a>
       </div>
     </div>
   </header>
@@ -96,10 +107,10 @@ app.innerHTML = `
           <p class="danzaio-kicker">Rift+ // Hanbot script suite</p>
           <h1>Rift+ puts its lineup, controls, and community in one place.</h1>
           <p class="danzaio-hero__lede">
-            Browse featured scripts, scan the lineup, see the kind of menu depth each champion offers, and jump straight into the live catalog or community.
+            Browse featured scripts, scan the highlights, jump into the full 30-entry lineup, and find the champion you want to queue with next.
           </p>
           <div class="danzaio-hero__actions">
-            <a class="pill pill--cyan" href="#roster">BROWSE ROSTER</a>
+            <a class="pill pill--cyan" href="#all-champions">ALL CHAMPIONS</a>
             <a class="pill pill--dark" href="#updates">SEE FACTS</a>
           </div>
           <div class="danzaio-hero__stats">
@@ -136,7 +147,7 @@ app.innerHTML = `
     </section>
 
     <section class="danzaio-section section-animate" id="systems">
-      ${renderMajorHeader('What players get', './assets/icons/content-type-latest.png', 'Everything below stays focused on the actual experience: supported champions, adjustable menu sections, and fast access to the live catalog.')}
+      ${renderMajorHeader('What players get', './assets/icons/content-type-latest.png', 'Everything below stays focused on the actual experience: supported champions, adjustable menu sections, and a full internal lineup.')}
       <div class="danzaio-feature-grid">
         ${featureCards.map(renderFeatureCard).join('')}
       </div>
@@ -151,9 +162,16 @@ app.innerHTML = `
     </section>
 
     <section class="danzaio-section danzaio-section--roster section-animate" id="roster">
-      ${renderMajorHeader('Current lineup', './assets/icons/content-type-trending.png', 'A fast scan of the current roster, using the same names and tags players already see in the suite.')}
+      ${renderMajorHeader('Current highlights', './assets/icons/content-type-trending.png', 'A tighter set of standout picks before the full lineup starts below.')}
       <div class="danzaio-roster-grid">
         ${rosterCards.map(renderRosterCard).join('')}
+      </div>
+    </section>
+
+    <section class="danzaio-section danzaio-section--catalog section-animate" id="all-champions">
+      ${renderMajorHeader('All champions', './assets/icons/content-type-champion.png', 'The full internal lineup is listed here, so the page stands on its own without sending you to another catalog.')}
+      <div class="danzaio-catalog-grid">
+        ${allChampionCards.map(renderCatalogCard).join('')}
       </div>
     </section>
 
@@ -167,9 +185,9 @@ app.innerHTML = `
     <section class="danzaio-cta section-animate">
       <div class="danzaio-cta__inner">
         <p class="danzaio-kicker">Rift+ // Ready to queue</p>
-        <h2>Open the catalog, join the community, and pick the champion you want to play next.</h2>
+        <h2>Scroll the full roster, pick your champion, and jump into the community when you want backup.</h2>
         <div class="danzaio-cta__actions">
-          <a class="pill pill--cyan" href="https://danzaio.github.io/champions/" target="_blank" rel="noreferrer">OPEN LIVE CATALOG</a>
+          <a class="pill pill--cyan" href="#all-champions">ALL CHAMPIONS</a>
           <a class="pill pill--dark" href="https://dsc.gg/danzaio" target="_blank" rel="noreferrer">JOIN DISCORD</a>
         </div>
       </div>
@@ -239,4 +257,3 @@ function setupRevealObservers() {
 }
 
 setupRevealObservers();
-

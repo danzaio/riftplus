@@ -27,7 +27,7 @@ export const featureCards = [
   {
     kicker: 'Current lineup',
     title: '30 supported entries are already in rotation.',
-    body: 'The lineup includes names like Ezreal, Jinx, Aphelios, Zed, Pyke, Blitz, Senna, Zoe, Mel, Yunara, and more, with HOT, UPD, TEST, and NEW tags visible in the suite.',
+    body: 'The lineup includes Ezreal, Jinx, Aphelios, Zed, Pyke, Blitz, Senna, Zoe, Mel, Yunara, and many more, with HOT, UPD, TEST, and NEW tags visible in the suite.',
   },
   {
     kicker: 'Prediction menus',
@@ -69,7 +69,7 @@ export const spotlightScripts = [
     image: 'https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ezreal_0.jpg',
     crest: './assets/crests/piltover.png',
     crestAlt: 'piltover crest',
-    href: '#roster',
+    href: '#all-champions',
   },
   {
     name: 'PYKE',
@@ -83,7 +83,7 @@ export const spotlightScripts = [
     image: 'https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Pyke_0.jpg',
     crest: './assets/crests/shadow-isles.png',
     crestAlt: 'shadow isles crest',
-    href: '#roster',
+    href: '#all-champions',
   },
   {
     name: 'APHELIOS',
@@ -97,7 +97,7 @@ export const spotlightScripts = [
     image: 'https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aphelios_0.jpg',
     crest: './assets/icons/content-type-champion.png',
     crestAlt: 'champion icon',
-    href: '#roster',
+    href: '#all-champions',
   },
   {
     name: 'ZED',
@@ -111,7 +111,7 @@ export const spotlightScripts = [
     image: 'https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Zed_0.jpg',
     crest: './assets/icons/content-type-trending.png',
     crestAlt: 'trending icon',
-    href: '#roster',
+    href: '#all-champions',
   },
 ];
 
@@ -166,6 +166,39 @@ export const rosterCards = [
   },
 ];
 
+export const allChampionCards = [
+  { name: 'EZREAL', tag: 'HOT', desc: 'Mystic Shot Prediction' },
+  { name: 'ZERI', tag: 'UPD', desc: 'The Spark of Zaun' },
+  { name: 'JINX', tag: 'HOT', desc: 'Get Excited Reset' },
+  { name: 'JAX', tag: 'TEST', desc: 'Leap Strike Test' },
+  { name: 'YUNARA', tag: 'NEW', desc: 'New Champion' },
+  { name: 'ZAAHEN', tag: 'NEW', desc: 'The Unsundered' },
+  { name: "KOG'MAW", tag: 'SCRIPT', desc: 'Orbwalker Limit' },
+  { name: 'TWITCH', tag: 'SCRIPT', desc: 'Stealth Logic' },
+  { name: 'SAMIRA', tag: 'HOT', desc: 'S-Rank Combo' },
+  { name: 'APHELIOS', tag: 'NEW', desc: 'Weapon Pair Automation' },
+  { name: 'CAITLYN', tag: 'SCRIPT', desc: 'Trap Logic' },
+  { name: "KAI'SA", tag: 'SCRIPT', desc: 'Void Seeker' },
+  { name: 'SHYVANA', tag: 'NEW', desc: 'Dragon Form Control' },
+  { name: 'QIYANA', tag: 'NEW', desc: 'Element Combo Control' },
+  { name: 'ZED', tag: 'NEW', desc: 'Shadow State Combat' },
+  { name: 'SENNA', tag: 'UPD', desc: 'Soul Farming' },
+  { name: 'TRISTANA', tag: 'SCRIPT', desc: 'Explosive Charge' },
+  { name: 'MILIO', tag: 'SCRIPT', desc: 'Campfire Support' },
+  { name: 'BLITZ', tag: 'SCRIPT', desc: 'Hook Prediction' },
+  { name: 'PYKE', tag: 'SCRIPT', desc: 'Execute Resets' },
+  { name: 'ORIANNA', tag: 'SCRIPT', desc: 'Ball Management' },
+  { name: 'XERATH', tag: 'SCRIPT', desc: 'Sniper Mode' },
+  { name: 'SERAPHINE', tag: 'SCRIPT', desc: 'Double Cast' },
+  { name: 'CORKI', tag: 'SCRIPT', desc: 'Package Timer' },
+  { name: 'OLAF', tag: 'SCRIPT', desc: 'Axe Spam' },
+  { name: 'CASSIO', tag: 'SCRIPT', desc: 'Twin Fang' },
+  { name: 'MEL', tag: 'NEW', desc: 'Arcane Logic' },
+  { name: 'ZOE', tag: 'NEW', desc: 'Arcane Logic' },
+  { name: 'SYNDRA', tag: 'NEW', desc: 'Sphere Control' },
+  { name: 'XAYAH', tag: 'NEW', desc: 'Arcane Logic' },
+];
+
 export const changelogEntries = [
   {
     version: 'Lineup',
@@ -203,8 +236,7 @@ export const changelogEntries = [
 ];
 
 export const supportLinks = [
-  { text: 'Live catalog', href: 'https://danzaio.github.io/champions/' },
-  { text: 'Telegram', href: 'https://t.me/DanzAIO' },
+  { text: 'Highlights', href: '#roster' },
+  { text: 'All champions', href: '#all-champions' },
   { text: 'Discord', href: 'https://dsc.gg/danzaio' },
 ];
-
