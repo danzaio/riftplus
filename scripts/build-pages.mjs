@@ -11,7 +11,6 @@ await mkdir(out, { recursive: true });
 await mkdir(srcOut, { recursive: true });
 
 let html = await readFile(resolve(root, 'danzaio.html'), 'utf8');
-html = html.replace(/<title>[\s\S]*?<\/title>/, '<title>Rift+ - Script Suite Showcase</title>');
 await writeFile(resolve(out, 'index.html'), html, 'utf8');
 
 for (const entry of await readdir(resolve(root, 'public'))) {
