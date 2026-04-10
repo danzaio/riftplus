@@ -54,12 +54,16 @@ const renderRosterCard = (card, index) => `
 
 const renderCatalogCard = (card, index) => `
   <article class="danzaio-catalog-card" style="--reveal-delay:${index * 40}ms;">
-    <div class="danzaio-catalog-card__topline">
-      <span class="danzaio-catalog-card__tag">${card.tag}</span>
-      <span class="danzaio-catalog-card__badge">${iconBadge()}</span>
+    <div class="danzaio-catalog-card__image" style="background-image:url('${card.image}'); background-position:${card.position};"></div>
+    <div class="danzaio-catalog-card__body">
+      <div class="danzaio-catalog-card__topline">
+        <span class="danzaio-catalog-card__tag">${card.label}</span>
+        <span class="danzaio-catalog-card__badge">${iconBadge()}</span>
+      </div>
+      <h3>${card.name}</h3>
+      <h4>${card.role}</h4>
+      <p>${card.description}</p>
     </div>
-    <h3>${card.name}</h3>
-    <p>${card.desc}</p>
   </article>
 `;
 
@@ -84,7 +88,7 @@ app.innerHTML = `
         <span class="riotbar__brand-mark" aria-hidden="true"></span>
         <span>Rift+</span>
       </a>
-      <nav class="riotbar__nav" aria-label="Rift+ showcase">
+      <nav class="riotbar__nav" aria-label="Rift+ navigation">
         <a href="#overview">OVERVIEW</a>
         <a href="#spotlight">SPOTLIGHT</a>
         <a href="#roster">HIGHLIGHTS</a>
@@ -105,13 +109,13 @@ app.innerHTML = `
       <div class="danzaio-hero__inner">
         <div class="danzaio-hero__copy section-animate is-visible">
           <p class="danzaio-kicker">Rift+ // Hanbot script suite</p>
-          <h1>Rift+ puts its lineup, controls, and community in one place.</h1>
+          <h1>Rift+ keeps champion control sharp from first queue to last fight.</h1>
           <p class="danzaio-hero__lede">
-            Browse featured scripts, scan the highlights, jump into the full 30-entry lineup, and find the champion you want to queue with next.
+            30 supported champions, champion-specific menus, prediction controls on supported picks, and direct access to the community when you need it.
           </p>
           <div class="danzaio-hero__actions">
-            <a class="pill pill--cyan" href="#all-champions">ALL CHAMPIONS</a>
-            <a class="pill pill--dark" href="#updates">SEE FACTS</a>
+            <a class="pill pill--cyan" href="#all-champions">FULL LINEUP</a>
+            <a class="pill pill--dark" href="#updates">DETAILS</a>
           </div>
           <div class="danzaio-hero__stats">
             ${heroStats.map((stat) => `
@@ -131,9 +135,9 @@ app.innerHTML = `
               ${suiteSignals.map((signal) => `<span>${signal}</span>`).join('')}
             </div>
             <div class="danzaio-hero__panel-copy">
-              <p>Quick snapshot</p>
-              <h2>30 supported entries, champion-specific menus, and direct support links.</h2>
-              <span>From prediction pages to combo, harass, clear, drawings, and killsteal tools, Rift+ is built to be tuned fast.</span>
+              <p>Rift+</p>
+              <h2>30 champions. Clean menus. Fast setup.</h2>
+              <span>Combo, Harass, Clear, Drawings, Killsteal, and champion-specific extras stay close so setup never slows you down.</span>
             </div>
           </div>
         </div>
@@ -147,7 +151,7 @@ app.innerHTML = `
     </section>
 
     <section class="danzaio-section section-animate" id="systems">
-      ${renderMajorHeader('What players get', './assets/icons/content-type-latest.png', 'Everything below stays focused on the actual experience: supported champions, adjustable menu sections, and a full internal lineup.')}
+      ${renderMajorHeader('What players get', './assets/icons/content-type-latest.png', 'Champion-specific control, clean menus, and a lineup that stays easy to pick from.')}
       <div class="danzaio-feature-grid">
         ${featureCards.map(renderFeatureCard).join('')}
       </div>
@@ -156,27 +160,27 @@ app.innerHTML = `
     <section class="carousel-section carousel-section--champions danzaio-spotlight-wrap section-animate" id="spotlight">
       <div class="section-bg danzaio-spotlight-bg" aria-hidden="true"></div>
       <div class="carousel-section__inner">
-        ${renderMajorHeader('Featured scripts', './assets/icons/content-type-champion.png', 'A closer look at standout scripts and the menu depth players can expect.')}
+        ${renderMajorHeader('Featured scripts', './assets/icons/content-type-champion.png', 'A few standout picks from the Rift+ lineup.')}
         <div class="champion-spotlight danzaio-spotlight" id="danzaio-spotlight"></div>
       </div>
     </section>
 
     <section class="danzaio-section danzaio-section--roster section-animate" id="roster">
-      ${renderMajorHeader('Current highlights', './assets/icons/content-type-trending.png', 'A tighter set of standout picks before the full lineup starts below.')}
+      ${renderMajorHeader('Current highlights', './assets/icons/content-type-trending.png', 'Popular picks with strong menu depth and quick access to their key tools.')}
       <div class="danzaio-roster-grid">
         ${rosterCards.map(renderRosterCard).join('')}
       </div>
     </section>
 
     <section class="danzaio-section danzaio-section--catalog section-animate" id="all-champions">
-      ${renderMajorHeader('All champions', './assets/icons/content-type-champion.png', 'The full internal lineup is listed here, so the page stands on its own without sending you to another catalog.')}
+      ${renderMajorHeader('All champions', './assets/icons/content-type-champion.png', 'Every supported champion in the current Rift+ lineup, all in one place.')}
       <div class="danzaio-catalog-grid">
         ${allChampionCards.map(renderCatalogCard).join('')}
       </div>
     </section>
 
     <section class="danzaio-section danzaio-section--updates section-animate" id="updates">
-      ${renderMajorHeader('Rift+ facts', './assets/icons/content-type-faction.png', 'Straight facts about the lineup, menu structure, and support links.')}
+      ${renderMajorHeader('Rift+ details', './assets/icons/content-type-faction.png', 'Straight facts about the lineup, the menu structure, and where to find support.')}
       <div class="danzaio-updates-grid">
         ${changelogEntries.map(renderFactCard).join('')}
       </div>
@@ -184,10 +188,10 @@ app.innerHTML = `
 
     <section class="danzaio-cta section-animate">
       <div class="danzaio-cta__inner">
-        <p class="danzaio-kicker">Rift+ // Ready to queue</p>
-        <h2>Scroll the full roster, pick your champion, and jump into the community when you want backup.</h2>
+        <p class="danzaio-kicker">Rift+ // Ready when you are</p>
+        <h2>Pick your champion, lock your setup, and queue up.</h2>
         <div class="danzaio-cta__actions">
-          <a class="pill pill--cyan" href="#all-champions">ALL CHAMPIONS</a>
+          <a class="pill pill--cyan" href="#all-champions">FULL LINEUP</a>
           <a class="pill pill--dark" href="https://dsc.gg/danzaio" target="_blank" rel="noreferrer">JOIN DISCORD</a>
         </div>
       </div>
@@ -224,7 +228,7 @@ function renderSpotlight() {
           <div>${card.laneLabel}: ${card.lane}</div>
           <div>${card.systemLabel}: ${card.system}</div>
         </div>
-        <a class="spotlight__cta" href="${card.href}">View lineup &rarr;</a>
+        <a class="spotlight__cta" href="${card.href}">See champion &rarr;</a>
       </div>
       <p class="danzaio-spotlight__blurb">${card.title} - ${card.blurb}</p>
     </div>
