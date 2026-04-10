@@ -249,15 +249,7 @@ renderSpotlight();
 
 function setupRevealObservers() {
   const targets = document.querySelectorAll('.section-animate, .major-section-header');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-visible');
-      }
-    });
-  }, { threshold: 0.18, rootMargin: '0px 0px -8% 0px' });
-
-  targets.forEach((el) => observer.observe(el));
+  targets.forEach((el) => el.classList.add('is-visible'));
 }
 
 setupRevealObservers();
