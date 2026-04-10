@@ -1,0 +1,12 @@
+{
+  "name": "leagueplus-showcase",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "build:pages": "node scripts/build-pages.mjs",
+    "download:assets": "node scripts/download-assets.mjs",
+    "preview": "python -m http.server 4173 -d dist",
+    "preview:pages": "python -m http.server 4174 -d pages-dist"
+  }
+}

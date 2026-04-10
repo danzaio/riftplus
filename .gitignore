@@ -1,0 +1,10 @@
+/dist/
+/pages-dist/
+/.omx/
+/debug-*.png
+/final-fullpage.png
+/local-screenshot-*.png
+/danzaio-page*.png
+/danzaio-ref*.png
+/docs/
+/leagueplus-live.png
