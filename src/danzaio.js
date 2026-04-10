@@ -53,12 +53,12 @@ const renderRosterCard = (card, index) => `
 `;
 
 const renderCatalogCard = (card, index) => `
-  <article class="danzaio-catalog-card" style="--reveal-delay:${index * 40}ms;">
-    <div class="danzaio-catalog-card__image" style="background-image:url('${card.image}'); background-position:${card.position};"></div>
-    <div class="danzaio-catalog-card__body">
-      <div class="danzaio-catalog-card__topline">
-        <span class="danzaio-catalog-card__tag">${card.label}</span>
-        <span class="danzaio-catalog-card__badge">${iconBadge()}</span>
+  <article class="danzaio-roster-card danzaio-roster-card--catalog" style="--reveal-delay:${index * 40}ms;">
+    <div class="danzaio-roster-card__image" style="background-image:url('${card.image}'); background-position:${card.position};"></div>
+    <div class="danzaio-roster-card__body">
+      <div class="danzaio-roster-card__topline">
+        <span class="danzaio-roster-card__label">${card.label}</span>
+        <span class="danzaio-roster-card__badge">${iconBadge()}</span>
       </div>
       <h3>${card.name}</h3>
       <h4>${card.role}</h4>
@@ -174,7 +174,7 @@ app.innerHTML = `
 
     <section class="danzaio-section danzaio-section--catalog section-animate" id="all-champions">
       ${renderMajorHeader('All champions', './assets/icons/content-type-champion.png', 'Every supported champion in the current Rift+ lineup, all in one place.')}
-      <div class="danzaio-catalog-grid">
+      <div class="danzaio-roster-grid danzaio-roster-grid--catalog">
         ${allChampionCards.map(renderCatalogCard).join('')}
       </div>
     </section>
