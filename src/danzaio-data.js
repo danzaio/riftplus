@@ -2,17 +2,17 @@ export const heroStats = [
   {
     label: 'Supported scripts',
     value: '30',
-    note: 'The current launcher catalog in main.lua lists 30 champion entries.',
+    note: '30 champion entries are currently listed in the Rift+ lineup.',
   },
   {
     label: 'Suite name',
-    value: 'League+',
-    note: 'League+ is the current public name for the suite shown in these files.',
+    value: 'Rift+',
+    note: 'One name, one lineup, one place to browse the suite.',
   },
   {
     label: 'Community',
     value: 'TG + DC',
-    note: 'Telegram and Discord links are built into the suite configuration.',
+    note: 'Telegram and Discord are both linked directly from the suite.',
   },
 ];
 
@@ -26,33 +26,33 @@ export const suiteSignals = [
 export const featureCards = [
   {
     kicker: 'Current lineup',
-    title: 'League+ already has a broad champion catalog.',
-    body: 'The current launcher list includes entries such as Ezreal, Jinx, Aphelios, Zed, Pyke, Blitz, Senna, Zoe, Mel, Yunara, and more, with HOT, UPD, TEST, and NEW tags shown in the suite UI.',
+    title: '30 supported entries are already in rotation.',
+    body: 'The lineup includes names like Ezreal, Jinx, Aphelios, Zed, Pyke, Blitz, Senna, Zoe, Mel, Yunara, and more, with HOT, UPD, TEST, and NEW tags visible in the suite.',
   },
   {
     kicker: 'Prediction menus',
-    title: 'Players can tune prediction directly from supported menus.',
-    body: 'Champion scripts such as Ezreal, Jinx, and Blitzcrank expose prediction settings in their menus, including global hitchance controls on supported scripts.',
+    title: 'Prediction settings are there when you want them.',
+    body: 'Supported champions like Ezreal, Jinx, and Blitzcrank expose prediction controls directly in their menus, including hitchance tuning on supported pages.',
   },
   {
     kicker: 'Core modes',
-    title: 'Combo, harass, and clear stay front and center.',
-    body: 'Across the champion Lua files, the most common player-facing sections are Combo, Harass, and Clear, so the suite matches the way players actually use their scripts in game.',
+    title: 'Combo, Harass, and Clear stay easy to tune.',
+    body: 'The most common menu sections are built around real in-game use: combo pressure, harass windows, and clear control.',
   },
   {
     kicker: 'Useful extras',
-    title: 'Drawings, killsteal, and utility pages are widely present.',
-    body: 'Many of the current champion menus include drawings and killsteal sections, while selected scripts also add reactive logic, semi-manual keys, and per-enemy controls.',
+    title: 'Drawings, killsteal, and utility pages are built in.',
+    body: 'Many champions also add drawings and killsteal sections, while selected scripts go further with reactive logic, semi-manual keys, and per-enemy controls.',
   },
   {
     kicker: 'Champion depth',
-    title: 'Several scripts go far beyond basic toggles.',
-    body: 'Ezreal includes smart targeting and Auto Q controls, Pyke adds E Magnet and E+Flash options, Aphelios exposes weapon-pair logic, and Zed includes Flash Tech and reactive settings.',
+    title: 'Some scripts go far beyond basic toggles.',
+    body: 'Ezreal adds smart targeting and Auto Q tools, Pyke brings E Magnet and E+Flash options, Aphelios gets weapon-pair logic, and Zed includes Flash Tech and reactive settings.',
   },
   {
     kicker: 'Support access',
-    title: 'Community links and bilingual support are already part of the suite.',
-    body: 'The current launcher config includes Telegram and Discord links, and the suite UI contains English and Chinese text paths.',
+    title: 'The community is always one click away.',
+    body: 'Telegram and Discord links are built in, and the suite supports both English and Chinese text paths.',
   },
 ];
 
@@ -65,7 +65,7 @@ export const spotlightScripts = [
     systemLabel: 'Focus',
     system: 'Smart targeting',
     blurb:
-      'Ezreal exposes Prediction Settings, smart targeting, Auto Q controls, and dedicated Mystic Shot and Essence Flux pages in the champion menu.',
+      'Prediction Settings, smart targeting, Auto Q controls, and dedicated Mystic Shot and Essence Flux pages keep Ezreal flexible without feeling bloated.',
     image: 'https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ezreal_0.jpg',
     crest: './assets/crests/piltover.png',
     crestAlt: 'piltover crest',
@@ -79,7 +79,7 @@ export const spotlightScripts = [
     systemLabel: 'Focus',
     system: 'E Magnet + safety',
     blurb:
-      'Pyke includes Bone Skewer, Phantom Undertow, E Magnet, safety checks, and E+Flash follow tools for players who want more control over engage timing.',
+      'Bone Skewer, Phantom Undertow, E Magnet, safety checks, and E+Flash follow tools give Pyke players more control over every engage.',
     image: 'https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Pyke_0.jpg',
     crest: './assets/crests/shadow-isles.png',
     crestAlt: 'shadow isles crest',
@@ -93,7 +93,7 @@ export const spotlightScripts = [
     systemLabel: 'Focus',
     system: 'Pairs + reactive',
     blurb:
-      'Aphelios exposes weapon logic, pair controls, killsteal, reactive options, safety rules, flee behavior, and per-enemy controls in one detailed menu.',
+      'Weapon logic, pair controls, killsteal, reactive options, safety rules, flee behavior, and per-enemy controls make this one of the deepest scripts in the lineup.',
     image: 'https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aphelios_0.jpg',
     crest: './assets/icons/content-type-champion.png',
     crestAlt: 'champion icon',
@@ -107,7 +107,7 @@ export const spotlightScripts = [
     systemLabel: 'Focus',
     system: 'Reactive + drawings',
     blurb:
-      'Zed includes prediction, combo, harass, killsteal, Flash Tech, reactive settings, clear, last-hit, and low-HP drawing tools.',
+      'Prediction, combo, harass, killsteal, Flash Tech, reactive settings, clear, last-hit, and low-HP drawing tools give Zed players a wide control surface.',
     image: 'https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Zed_0.jpg',
     crest: './assets/icons/content-type-trending.png',
     crestAlt: 'trending icon',
@@ -128,7 +128,7 @@ export const rosterCards = [
     name: 'JINX',
     role: 'Get Excited Reset',
     label: 'HOT',
-    description: 'Jinx includes Prediction Settings, separate spell pages, Automatic options, Killsteal Settings, Draw Settings, and a Permashow section.',
+    description: 'Prediction Settings, spell pages, Automatic options, Killsteal Settings, Draw Settings, and Permashow keep Jinx easy to shape around your playstyle.',
     image: 'https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Jinx_0.jpg',
     position: 'center top',
   },
@@ -136,7 +136,7 @@ export const rosterCards = [
     name: 'CAITLYN',
     role: 'Trap Logic',
     label: 'SCRIPT',
-    description: 'Caitlyn appears in the current League+ launcher catalog with Trap Logic as her listed focus.',
+    description: 'Trap Logic is one of the highlighted focuses in the lineup and fits players who want more control around lane pressure and trap setup.',
     image: 'https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Caitlyn_0.jpg',
     position: 'center top',
   },
@@ -144,7 +144,7 @@ export const rosterCards = [
     name: 'SENNA',
     role: 'Soul Farming',
     label: 'UPD',
-    description: 'Senna is tagged UPD in the current catalog and stands out as one of the maintained champion entries in the suite.',
+    description: 'Marked UPD in the lineup, Senna stands out as one of the maintained entries for players who want scaling utility and range.',
     image: 'https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Senna_0.jpg',
     position: 'center top',
   },
@@ -152,7 +152,7 @@ export const rosterCards = [
     name: 'SAMIRA',
     role: 'S-Rank Combo',
     label: 'HOT',
-    description: 'Samira is marked HOT in the current catalog and stands out as one of the suite entries aimed at fast combo players.',
+    description: 'Marked HOT in the lineup, Samira is positioned for players who want fast combo flow and high-tempo all-in play.',
     image: 'https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Samira_0.jpg',
     position: 'center top',
   },
@@ -160,7 +160,7 @@ export const rosterCards = [
     name: 'ZOE',
     role: 'Arcane Logic',
     label: 'NEW',
-    description: 'Zoe is tagged NEW in the launcher catalog and appears as one of the more recent additions in the current suite list.',
+    description: 'Marked NEW in the lineup, Zoe shows up as one of the fresher options for players who want a more specialist script profile.',
     image: 'https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Zoe_0.jpg',
     position: 'center top',
   },
@@ -168,36 +168,36 @@ export const rosterCards = [
 
 export const changelogEntries = [
   {
-    version: 'Catalog',
+    version: 'Lineup',
     date: '30 entries',
-    type: 'main.lua',
-    title: 'The current launcher catalog is already broad and clearly tagged.',
+    type: 'visible tags',
+    title: 'The lineup is already broad and clearly labeled.',
     bullets: [
       'HOT tags currently appear on Ezreal, Jinx, and Samira.',
-      'UPD tags appear on Zeri and Senna in the current catalog.',
+      'UPD tags appear on Zeri and Senna.',
       'NEW tags appear on entries such as Yunara, Aphelios, Shyvana, Qiyana, Zed, Mel, Zoe, Syndra, and Xayah.',
     ],
   },
   {
     version: 'Menus',
     date: 'player controls',
-    type: 'champion luas',
-    title: 'The suite menus focus on practical in-game controls.',
+    type: 'common sections',
+    title: 'The suite is built around the controls players actually use.',
     bullets: [
-      'Combo, Harass, and Clear appear widely across the champion scripts.',
-      'Drawings and Killsteal settings are common player-facing menu sections.',
-      'Supported champions add extras like reactive options, semi-manual keys, and per-enemy pages.',
+      'Combo, Harass, and Clear appear widely across the champion menus.',
+      'Drawings and Killsteal settings are common menu sections.',
+      'Selected scripts add reactive options, semi-manual keys, and per-enemy pages.',
     ],
   },
   {
     version: 'Support',
     date: 'Telegram + Discord',
-    type: 'suite links',
-    title: 'Players already have direct paths into the League+ community.',
+    type: 'quick access',
+    title: 'Community and support stay close to the lineup.',
     bullets: [
-      'The launcher config includes a Telegram link: t.me/DanzAIO.',
-      'The launcher config includes a Discord link: dsc.gg/danzaio.',
-      'English and Chinese text paths are present in the suite UI.',
+      'Telegram is linked directly in the suite.',
+      'Discord is linked directly in the suite.',
+      'English and Chinese text paths are available across the UI.',
     ],
   },
 ];
@@ -207,3 +207,4 @@ export const supportLinks = [
   { text: 'Telegram', href: 'https://t.me/DanzAIO' },
   { text: 'Discord', href: 'https://dsc.gg/danzaio' },
 ];
+

@@ -1,5 +1,5 @@
 {
-  "name": "leagueplus-showcase",
+  "name": "riftplus-showcase",
   "private": true,
   "type": "module",
   "scripts": {
@@ -10,3 +10,4 @@
     "preview:pages": "python -m http.server 4174 -d pages-dist"
   }
 }
+

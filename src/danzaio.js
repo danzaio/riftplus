@@ -52,7 +52,7 @@ const renderRosterCard = (card, index) => `
   </article>
 `;
 
-const renderChangelogCard = (entry, index) => `
+const renderFactCard = (entry, index) => `
   <article class="danzaio-update-card" style="--reveal-delay:${index * 100}ms;">
     <div class="danzaio-update-card__meta">
       <span>${entry.version}</span>
@@ -71,9 +71,9 @@ app.innerHTML = `
     <div class="riotbar__inner">
       <a class="riotbar__brand riotbar__brand--danzaio" href="./">
         <span class="riotbar__brand-mark" aria-hidden="true"></span>
-        <span>League+</span>
+        <span>Rift+</span>
       </a>
-      <nav class="riotbar__nav" aria-label="League+ showcase">
+      <nav class="riotbar__nav" aria-label="Rift+ showcase">
         <a href="#overview">OVERVIEW</a>
         <a href="#systems">FEATURES</a>
         <a href="#spotlight">SPOTLIGHT</a>
@@ -93,14 +93,14 @@ app.innerHTML = `
       <div class="danzaio-hero__texture" aria-hidden="true"></div>
       <div class="danzaio-hero__inner">
         <div class="danzaio-hero__copy section-animate is-visible">
-          <p class="danzaio-kicker">League+ // Hanbot script suite</p>
-          <h1>Browse the real League+ lineup, menus, and community in one premium page.</h1>
+          <p class="danzaio-kicker">Rift+ // Hanbot script suite</p>
+          <h1>Rift+ puts its lineup, controls, and community in one place.</h1>
           <p class="danzaio-hero__lede">
-            League+ is the new public name for the suite currently represented by the DanZ-AIO and Danzaio files. This page is written around the real catalog, champion menus, and support links that exist today.
+            Browse featured scripts, scan the lineup, see the kind of menu depth each champion offers, and jump straight into the live catalog or community.
           </p>
           <div class="danzaio-hero__actions">
             <a class="pill pill--cyan" href="#roster">BROWSE ROSTER</a>
-            <a class="pill pill--dark" href="#updates">SEE SUITE FACTS</a>
+            <a class="pill pill--dark" href="#updates">SEE FACTS</a>
           </div>
           <div class="danzaio-hero__stats">
             ${heroStats.map((stat) => `
@@ -120,9 +120,9 @@ app.innerHTML = `
               ${suiteSignals.map((signal) => `<span>${signal}</span>`).join('')}
             </div>
             <div class="danzaio-hero__panel-copy">
-              <p>Current suite snapshot</p>
-              <h2>League+ is backed by a 30-entry catalog, champion menus, and direct support links.</h2>
-              <span>The copy on this page is grounded in the current launcher catalog, README, and champion menu text from the suite files.</span>
+              <p>Quick snapshot</p>
+              <h2>30 supported entries, champion-specific menus, and direct support links.</h2>
+              <span>From prediction pages to combo, harass, clear, drawings, and killsteal tools, Rift+ is built to be tuned fast.</span>
             </div>
           </div>
         </div>
@@ -136,7 +136,7 @@ app.innerHTML = `
     </section>
 
     <section class="danzaio-section section-animate" id="systems">
-      ${renderMajorHeader('What players get', './assets/icons/content-type-latest.png', 'These sections are based on the current League+ catalog and champion menus, so the page speaks to what players actually see and use instead of dev-only filler.')}
+      ${renderMajorHeader('What players get', './assets/icons/content-type-latest.png', 'Everything below stays focused on the actual experience: supported champions, adjustable menu sections, and fast access to the live catalog.')}
       <div class="danzaio-feature-grid">
         ${featureCards.map(renderFeatureCard).join('')}
       </div>
@@ -145,29 +145,29 @@ app.innerHTML = `
     <section class="carousel-section carousel-section--champions danzaio-spotlight-wrap section-animate" id="spotlight">
       <div class="section-bg danzaio-spotlight-bg" aria-hidden="true"></div>
       <div class="carousel-section__inner">
-        ${renderMajorHeader('Featured scripts', './assets/icons/content-type-champion.png', 'Each spotlight card calls out real champion menu depth from the current Lua files, so the showcase stays tied to what League+ actually offers.')}
+        ${renderMajorHeader('Featured scripts', './assets/icons/content-type-champion.png', 'A closer look at standout scripts and the menu depth players can expect.')}
         <div class="champion-spotlight danzaio-spotlight" id="danzaio-spotlight"></div>
       </div>
     </section>
 
     <section class="danzaio-section danzaio-section--roster section-animate" id="roster">
-      ${renderMajorHeader('Current catalog highlights', './assets/icons/content-type-trending.png', 'The roster cards below use champion names, tags, and focus notes taken from the current launcher catalog, with extra text only where the champion menus confirm it.')}
+      ${renderMajorHeader('Current lineup', './assets/icons/content-type-trending.png', 'A fast scan of the current roster, using the same names and tags players already see in the suite.')}
       <div class="danzaio-roster-grid">
         ${rosterCards.map(renderRosterCard).join('')}
       </div>
     </section>
 
     <section class="danzaio-section danzaio-section--updates section-animate" id="updates">
-      ${renderMajorHeader('Suite facts', './assets/icons/content-type-faction.png', 'No fake patch notes here. This section only summarizes facts that can be verified from the current suite files, current catalog, and built-in links.')}
+      ${renderMajorHeader('Rift+ facts', './assets/icons/content-type-faction.png', 'Straight facts about the lineup, menu structure, and support links.')}
       <div class="danzaio-updates-grid">
-        ${changelogEntries.map(renderChangelogCard).join('')}
+        ${changelogEntries.map(renderFactCard).join('')}
       </div>
     </section>
 
     <section class="danzaio-cta section-animate">
       <div class="danzaio-cta__inner">
-        <p class="danzaio-kicker">League+ // Ready to browse</p>
-        <h2>Open the live catalog, join the community, and see the suite through player-facing copy instead of dev-facing filler.</h2>
+        <p class="danzaio-kicker">Rift+ // Ready to queue</p>
+        <h2>Open the catalog, join the community, and pick the champion you want to play next.</h2>
         <div class="danzaio-cta__actions">
           <a class="pill pill--cyan" href="https://danzaio.github.io/champions/" target="_blank" rel="noreferrer">OPEN LIVE CATALOG</a>
           <a class="pill pill--dark" href="https://dsc.gg/danzaio" target="_blank" rel="noreferrer">JOIN DISCORD</a>
@@ -239,3 +239,4 @@ function setupRevealObservers() {
 }
 
 setupRevealObservers();
+
