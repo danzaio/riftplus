@@ -1589,6 +1589,8 @@ body.danzaio-body {
 }
 
 .danzaio-stat {
+  min-width: 0;
+  overflow: hidden;
   padding: 18px 18px 20px;
 }
 
@@ -1612,8 +1614,10 @@ body.danzaio-body {
   margin: 16px 0 10px;
   color: var(--gold-bright);
   font-family: 'Beaufort for LOL', serif;
-  font-size: clamp(1.4rem, 3vw, 2.35rem);
-  letter-spacing: 0.16em;
+  font-size: clamp(1.35rem, 2vw, 2rem);
+  letter-spacing: 0.08em;
+  line-height: 1.08;
+  overflow-wrap: anywhere;
 }
 
 .danzaio-stat span {

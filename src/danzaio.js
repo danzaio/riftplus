@@ -1,4 +1,4 @@
-import { hanbotSuite, platformCards, venSuite } from './danzaio-data.js?v=1777147081689';
+import { hanbotSuite, platformCards, venSuite } from './danzaio-data.js?v=1777147875315';
 
 const app = document.querySelector('#app');
 const pageKind = location.pathname.includes('/ven/') ? 'ven' : location.pathname.includes('/hanbot/') ? 'hanbot' : 'home';
