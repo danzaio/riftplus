@@ -3,6 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "dev": "node scripts/build-pages.mjs && python -m http.server 5173 -d pages-dist",
     "build": "node build.mjs",
     "build:pages": "node scripts/build-pages.mjs",
     "download:assets": "node scripts/download-assets.mjs",
@@ -10,4 +11,3 @@
     "preview:pages": "python -m http.server 4174 -d pages-dist"
   }
 }
-
