@@ -4,20 +4,20 @@ export const platformCards = [
   {
     key: 'ven',
     title: 'VEN',
-    kicker: 'Fast VEN suite',
+    kicker: '',
     href: 'ven/',
     image: splash('Zed'),
-    stats: ['6 champions', 'smart pred', 'fight-ready controls'],
-    body: 'A focused lineup for players who want crisp combos, cleaner kill windows, and readable in-game controls.',
+    stats: [],
+    body: '',
   },
   {
     key: 'hanbot',
     title: 'Hanbot',
-    kicker: 'Rift+ script suite',
+    kicker: '',
     href: 'hanbot/',
     image: splash('Ezreal'),
-    stats: ['30 champions', 'clean setup', 'Telegram + Discord'],
-    body: 'A broad champion lineup for players who want quick setup, familiar controls, and picks that are easy to browse.',
+    stats: [],
+    body: '',
   },
 ];
 
@@ -27,12 +27,13 @@ export const venSuite = {
   platformLabel: 'DanZAIO // VEN suite',
   headline: 'Sharper fights for the champions you actually play.',
   lede: 'A focused VEN lineup with cleaner combos, smarter skillshots, safer all-ins, and useful on-screen information.',
+  panelTitle: 'Controlled champion tools.',
   heroImage: splash('Zed'),
   panelImage: splash('Jinx'),
   stats: [
     { label: 'Supported champions', value: '6', note: 'Ezreal, Jinx, Pyke, Samira, Shyvana, and Zed are ready to play on VEN.' },
     { label: 'Platform', value: 'VEN', note: 'Made for VEN players who want responsive controls and fast champion setup.' },
-    { label: 'Core feel', value: 'Sharp', note: 'Skillshots, kill windows, safety checks, and visuals stay close to the fight.' },
+    { label: 'Core feel', value: 'Controlled', note: 'Skillshots, kill windows, safety checks, and visuals stay under your control.' },
   ],
   signals: ['champions // ready now', 'skillshots // smarter timing', 'fights // safer all-ins', 'support // telegram + discord'],
   supportLinks: [
@@ -44,17 +45,17 @@ export const venSuite = {
     {
       kicker: 'Ready to play',
       title: 'Pick a champion and get straight into the game.',
-      body: 'The VEN lineup focuses on six polished picks with clear controls, readable options, and tools that matter in actual fights.',
+      body: 'The VEN lineup focuses on six polished picks with clear controls, advanced options, and tools that matter in actual fights.',
     },
     {
       kicker: 'Skillshots',
       title: 'Land more of the spells that decide fights.',
-      body: 'Key casts are built around smarter timing, better target choice, and options you can tune without slowing down your setup.',
+      body: 'Key casts are built around smarter timing, better target choice, and options you can actually control.',
     },
     {
-      kicker: 'Combat flow',
-      title: 'Champion flow follows the way the pick wants to win.',
-      body: 'Ezreal keeps pressure high, Jinx plays for resets, Pyke hunts executes, Samira builds style, Shyvana forces dragon pressure, and Zed looks for lethal shadows.',
+      kicker: 'Champion flow',
+      title: 'Champion logic follows the way the pick wants to win.',
+      body: 'Each champion is tuned around the moments that matter most in game.',
     },
     {
       kicker: 'Safer aggression',

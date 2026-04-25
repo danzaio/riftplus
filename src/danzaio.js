@@ -1,4 +1,4 @@
-import { hanbotSuite, platformCards, venSuite } from './danzaio-data.js?v=1777145000853';
+import { hanbotSuite, platformCards, venSuite } from './danzaio-data.js?v=1777147081689';
 
 const app = document.querySelector('#app');
 const pageKind = location.pathname.includes('/ven/') ? 'ven' : location.pathname.includes('/hanbot/') ? 'hanbot' : 'home';
@@ -104,17 +104,16 @@ function renderHome() {
         <div class="platform-landing__inner section-animate is-visible">
           <p class="danzaio-kicker">DanZAIO suite</p>
           <h1>Choose your platform.</h1>
-          <p class="platform-landing__lede">Pick the suite you play on and jump straight into champion support, real features, and requests.</p>
           <div class="platform-grid">
             ${platformCards.map((platform) => `
               <a class="platform-card platform-card--${platform.key}" href="${platform.href}">
                 <div class="platform-card__image" style="background-image:url('${assetUrl(platform.image)}');"></div>
                 <div class="platform-card__shade"></div>
                 <div class="platform-card__body">
-                  <p>${platform.kicker}</p>
+                  ${platform.kicker ? `<p>${platform.kicker}</p>` : ''}
                   <h2>${platform.title}</h2>
-                  <span>${platform.body}</span>
-                  <div class="platform-card__stats">${platform.stats.map((stat) => `<b>${stat}</b>`).join('')}</div>
+                  ${platform.body ? `<span>${platform.body}</span>` : ''}
+                  ${platform.stats?.length ? `<div class="platform-card__stats">${platform.stats.map((stat) => `<b>${stat}</b>`).join('')}</div>` : ''}
                 </div>
               </a>
             `).join('')}
@@ -154,7 +153,7 @@ function renderSuite(suite) {
             <div class="danzaio-hero__panel-overlay"></div>
             <div class="danzaio-hero__panel-content">
               <div class="danzaio-terminal">${suite.signals.map((signal) => `<span>${signal}</span>`).join('')}</div>
-              <div class="danzaio-hero__panel-copy"><p>${suite.name}</p><h2>${suite.stats[0].value} champions. Clean menus. Fast setup.</h2><span>${suite.lede}</span></div>
+              <div class="danzaio-hero__panel-copy"><p>${suite.name}</p><h2>${suite.panelTitle || `${suite.stats[0].value} champions. Clean menus. Fast setup.`}</h2><span>${suite.lede}</span></div>
             </div>
           </div>
         </div>
